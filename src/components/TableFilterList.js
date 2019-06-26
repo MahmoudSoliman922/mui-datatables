@@ -38,11 +38,10 @@ class TableFilterList extends React.Component {
       <div className={classes.root}>
         {filterList.map((item, index) =>
           item.map((data, colIndex) => (
-            console.log(data, filterListRenderers[index](data)),
             <Chip
               label={filterListRenderers[index](data)}
               key={colIndex}
-              // onDelete={filterUpdate.bind(null, index, data, columnNames[index].name, 'checkbox')}
+              onDelete={filterUpdate.bind(null, index, data, columnNames[index].name, 'checkbox')}
               className={classes.chip}
             />
           )),
