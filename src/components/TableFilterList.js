@@ -38,6 +38,7 @@ class TableFilterList extends React.Component {
       <div className={classes.root}>
         {filterList.map((item, index) =>
           item.map((data, colIndex) => (
+            console.log(data, filterListRenderers[index](data)),
             <Chip
               label={filterListRenderers[index](data)}
               key={colIndex}
