@@ -862,8 +862,6 @@ class MUIDataTable extends React.Component {
           default:
             filterList[index] = filterPos >= 0 || value === '' ? [] : [value];
         }
-        console.log(this.getDisplayData(prevState.columns, prevState.data, filterList, prevState.searchText));
-        console.log(prevState.displayData);
         return {
           page: 0,
           filterList: filterList,
